@@ -1,13 +1,13 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "email": "admin@test.com",
       "password": "1234",
       "role": "admin"
     },
     {
-      "id": 2,
+      "id": "2",
       "email": "user@test.com",
       "password": "1234",
       "role": "user"
@@ -15,7 +15,7 @@
   ],
   "coches": [
     {
-      "id": 1,
+      "id": "1",
       "nombre": "McLaren MCL39",
       "año": 2025,
       "escuderia": "McLaren",
@@ -24,7 +24,7 @@
       "tipo": "actual"
     },
     {
-      "id": 2,
+      "id": "2",
       "nombre": "Mercedes W16",
       "año": 2025,
       "escuderia": "Mercedes",
@@ -33,7 +33,7 @@
       "tipo": "actual"
     },
     {
-      "id": 3,
+      "id": "3",
       "nombre": "Red Bull RB21",
       "año": 2025,
       "escuderia": "Red Bull",
@@ -42,7 +42,7 @@
       "tipo": "actual"
     },
     {
-      "id": 4,
+      "id": "4",
       "nombre": "Ferrari SF-25",
       "año": 2025,
       "escuderia": "Ferrari",
@@ -51,7 +51,7 @@
       "tipo": "actual"
     },
     {
-      "id": 5,
+      "id": "5",
       "nombre": "Williams FW47",
       "año": 2025,
       "escuderia": "Williams",
@@ -60,7 +60,7 @@
       "tipo": "actual"
     },
     {
-      "id": 6,
+      "id": "6",
       "nombre": "Racing Bulls VCARB 02",
       "año": 2025,
       "escuderia": "Racing Bulls",
@@ -69,7 +69,7 @@
       "tipo": "actual"
     },
     {
-      "id": 7,
+      "id": "7",
       "nombre": "Aston Martin AMR25",
       "año": 2025,
       "escuderia": "Aston Martin",
@@ -78,7 +78,7 @@
       "tipo": "actual"
     },
     {
-      "id": 8,
+      "id": "8",
       "nombre": "Haas VF-25",
       "año": 2025,
       "escuderia": "Haas",
@@ -87,7 +87,7 @@
       "tipo": "actual"
     },
     {
-      "id": 9,
+      "id": "9",
       "nombre": "Kick Sauber C45",
       "año": 2025,
       "escuderia": "Kick Sauber",
@@ -96,7 +96,7 @@
       "tipo": "actual"
     },
     {
-      "id": 10,
+      "id": "10",
       "nombre": "Alpine A525",
       "año": 2025,
       "escuderia": "Alpine",

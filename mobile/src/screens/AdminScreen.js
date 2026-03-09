@@ -38,7 +38,26 @@ export function AdminScreen() {
   }
 
   useEffect(() => {
-    loadCars()
+    let ignore = false
+
+    async function loadInitialCars() {
+      try {
+        const data = await carsService.getAll()
+        if (!ignore) {
+          setCars(data)
+        }
+      } catch {
+        if (!ignore) {
+          setError("No se pudo cargar el listado")
+        }
+      }
+    }
+
+    loadInitialCars()
+
+    return () => {
+      ignore = true
+    }
   }, [])
 
   if (user?.role !== "admin") {
