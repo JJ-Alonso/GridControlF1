@@ -11,6 +11,7 @@ El proyecto incluye:
 - Apartado de administrador (crear, editar, parchear y eliminar coches).
 - Diseno responsive para desktop y multiples breakpoints moviles.
 - PWA instalable con Service Worker.
+- App React Native (Expo) para Android con login, favoritos y panel admin.
 
 ## Framework y librerias (versiones)
 
@@ -87,3 +88,7 @@ En local puedes usar `npm run server`, pero en GitHub Pages necesitas una API on
 1. Publica la API (Render/Railway/otro) usando el mismo `db.json`.
 2. Configura en GitHub Actions el secreto/repositorio variable `VITE_API_URL` con tu URL (ej: `https://tu-api.onrender.com`).
 3. La app usa `VITE_API_URL` y, si no existe, cae a `http://localhost:3000`.
+
+## App Android (React Native)
+
+La app movil esta en `mobile/` y su guia de compilacion esta en [mobile/README.md](mobile/README.md).
