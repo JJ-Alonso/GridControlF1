@@ -1,16 +1,89 @@
-# React + Vite
+# GridControl F1
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicacion web desarrollada con React para gestionar un catalogo de coches de Formula 1 con autenticacion por roles, favoritos de usuario y panel de administracion con operaciones CRUD contra API.
 
-Currently, two official plugins are available:
+## Descripcion del proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+El proyecto incluye:
+- Rutas publicas y privadas con React Router.
+- Login contra API (`json-server`) con roles `user` y `admin`.
+- Apartado de usuario (perfil y favoritos).
+- Apartado de administrador (crear, editar, parchear y eliminar coches).
+- Diseno responsive para desktop y multiples breakpoints moviles.
+- PWA instalable con Service Worker.
 
-## React Compiler
+## Framework y librerias (versiones)
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- `react` `^19.2.0`
+- `react-dom` `^19.2.0`
+- `react-router-dom` `^7.13.0`
+- `tailwindcss` `^3.4.17`
+- `framer-motion` `^12.34.1`
+- `react-hook-form` `^7.71.1`
+- `react-hot-toast` `^2.6.0`
+- `json-server` `^1.0.0-beta.6`
+- `vite-plugin-pwa` `^1.1.0`
+- `vite` `7.2.5` (via `rolldown-vite`)
 
-## Expanding the ESLint configuration
+## Licencia de uso
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Este proyecto se distribuye bajo licencia MIT.
+
+## Guia de instalacion
+
+1. Clonar el repositorio:
+```bash
+git clone <URL_DEL_REPO>
+cd GridControlF1
+```
+
+2. Instalar dependencias:
+```bash
+npm install
+```
+
+3. Crear variables de entorno:
+```bash
+cp .env.example .env
+```
+
+4. Levantar API local:
+```bash
+npm run server
+```
+
+5. Levantar aplicacion web:
+```bash
+npm run dev
+```
+
+## Credenciales de prueba
+
+- Usuario:
+  - Email: `user@test.com`
+  - Password: `1234`
+- Admin:
+  - Email: `admin@test.com`
+  - Password: `1234`
+
+## Scripts disponibles
+
+- `npm run dev`: entorno de desarrollo.
+- `npm run build`: build de produccion.
+- `npm run preview`: previsualizacion del build.
+- `npm run server`: API local con `json-server`.
+- `npm run lint`: lint del proyecto.
+
+## Despliegue en hosting estatico gratuito (GitHub Pages)
+
+1. El repositorio incluye workflow automatico: [deploy-pages.yml](.github/workflows/deploy-pages.yml)
+2. En GitHub activa `Settings > Pages > Source: GitHub Actions`.
+3. Cada push a `main` compila y publica `dist/` automaticamente.
+
+## Backend remoto para la demo publica
+
+En local puedes usar `npm run server`, pero en GitHub Pages necesitas una API online:
+
+1. Publica la API (Render/Railway/otro) usando el mismo `db.json`.
+2. Configura en GitHub Actions el secreto/repositorio variable `VITE_API_URL` con tu URL (ej: `https://tu-api.onrender.com`).
+3. La app usa `VITE_API_URL` y, si no existe, cae a `http://localhost:3000`.
